@@ -7,7 +7,8 @@ const Booking = require("../models/booking");
 const Room = require("../models/room");
 const { v4: uuidv4 } = require("uuid");
 const moment = require("moment");
-const stripe = require("stripe")("sk_test_51PicS3KZD25U7VxSUXYq4dpRwhyjdp7Bkr9qjRzwnhiy0mRMK62wEATPsAgNg98nbLmwNUOK76vIf2e87VsUB2ez0050Ie88Bn");
+// const stripe = require("stripe")("sk_test_51PicS3KZD25U7VxSUXYq4dpRwhyjdp7Bkr9qjRzwnhiy0mRMK62wEATPsAgNg98nbLmwNUOK76vIf2e87VsUB2ez0050Ie88Bn");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // Route to handle room booking
 router.post("/bookroom", async (req, res) => {

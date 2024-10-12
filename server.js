@@ -1,9 +1,11 @@
+require('dotenv').config();
 
 const express = require('express');
 const connectDB = require('./db.js');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Import CORS
 const adminRoutes = require('./routes/adminRoutes');
+
 
 const app = express();
 
